@@ -1,11 +1,8 @@
-def logout(user, password, status):
-    if (status == True):
-        status = False
-        user = ""
-        password = ""
-        print("Logout berhasil.")
-    else :
-        print("Logout gagal!")
-        print("Anda belum login, silahkan login terlebih dahulu sebelum melakukan logout")
-    
-    return (user, password, status)
+import src.Functions as f
+
+def logout():  
+    if f.data_login == ['','','','','']:
+        print('belom login anjing!')
+    else:
+        f.data_login = ['','','','','']
+        print('Logout berhasil')

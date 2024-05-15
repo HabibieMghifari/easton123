@@ -6,6 +6,9 @@ c = 3284688326
 m = (2**64) - 1
 
 def random() -> int:
+    global a
+    global c
+    global m
     x[0] = int((a * x[0] + c) % m)
     return x[0]
 

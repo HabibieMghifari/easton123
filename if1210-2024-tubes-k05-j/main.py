@@ -6,6 +6,7 @@ import src.F03 as lgt
 import src.F04 as hlp
 import src.F14 as ld
 import src.F15 as sv
+import src.F16 as ext
 import os
 
 os.chdir('if1210-2024-tubes-k05-j')
@@ -24,13 +25,7 @@ while True:
     elif command == 'save':
         sv.save()
     elif command == 'exit':
-        while True:
-            mau_save = input('save duls gasi? (y/n): ')
-            if mau_save == 'y':
-                sv.save()
-                break
-            elif mau_save == 'n':
-                break
+        ext.exit()
         break
 
     

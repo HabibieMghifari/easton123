@@ -12,11 +12,7 @@ def csvwriter(file_name, data):
         for row in data:
             file.write(';'.join(map(str, row)) + '\n')
         
-def split_str(string : str,delimiter : str) -> list[str]:
-    # variable lokal
-    array : list[str] # hasil split
-    limit : int # membatasi string untuk ditambah ke array
-    
+def split_str(string,delimiter):
     array = []
     limit = 0
     for i in range(len(string)):
@@ -26,11 +22,7 @@ def split_str(string : str,delimiter : str) -> list[str]:
     array += [string[limit:]]
     return array            
 
-# fungsi membaca file csv sebagai matriks
-def read_csv(file_name : str) -> list[list[str]]:
-    # variable lokal
-    data : list[list[str]] # hasil read
-    
+def read_csv(file_name):
     data = []
     with open(file_name, 'r') as file:
         for line in file:
@@ -38,6 +30,7 @@ def read_csv(file_name : str) -> list[list[str]]:
             data += [row]
     return data
 
+# variable global
 data_login = ['','','','','']
 data_user = []
 data_monster = []
